@@ -1,17 +1,23 @@
-def binary_to_decimal() -> None:
-    raise NotImplementedError("binary_to_decimal not implemented")
+def bin_to_dec() -> None:
+    raise NotImplementedError('bin_to_dec not implemented')
 
-def decimal_to_binary() -> None:
-    raise NotImplementedError("decimal_to_binary not implemented")
+def dec_to_bin(n: int) -> None:
+    if n < 0:
+        raise ValueError('Input must be non-negative integer.')
+    
+    if n <= 1:
+        return str(n)
+    else:
+        return dec_to_bin(n // 2) + str(n % 2)
 
-def hexadecimal_to_decimal() -> None:
-    raise NotImplementedError("hexadecimal_to_decimal not implemented")
+def hex_to_dec() -> None:
+    raise NotImplementedError('hex_to_dec not implemented')
 
-def decimal_to_hexadecimal() -> None:
-    raise NotImplementedError("decimal_to_hexadecimal not implemented")
+def dec_to_hex() -> None:
+    raise NotImplementedError('dec_to_hex not implemented')
 
-def binary_to_hexadecimal() -> None:
-    raise NotImplementedError("binary_to_hexadecimal not implemented")
+def bin_to_hex() -> None:
+    raise NotImplementedError('bin_to_hex not implemented')
 
-def hexadecimal_to_binary() -> None:
-    raise NotImplementedError("hexadecimal_to_binary not implemented")
+def hex_to_bin() -> None:
+    raise NotImplementedError('hex_to_bin not implemented')
