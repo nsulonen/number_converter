@@ -1,3 +1,5 @@
+HEX_SYMBOL = "0123456789ABCDEF"
+
 class Decimal:
     @staticmethod
     def to_bin(decimal: int) -> str:
@@ -11,14 +13,12 @@ class Decimal:
 
     @staticmethod
     def to_hex(decimal: int) -> str:
-        hex_symbols = '0123456789ABCDEF'
-
         if decimal < 0:
             raise ValueError('Input must be non-negative integer.')
         elif decimal < 1:
-            return hex_symbols[decimal]
+            return HEX_SYMBOL[decimal]
 
-        return f'{Decimal.to_hex(decimal // 16)}{hex_symbols[decimal % 16]}'
+        return f'{Decimal.to_hex(decimal // 16)}{HEX_SYMBOL[decimal % 16]}'
 
 class Binary:
     @staticmethod
@@ -35,11 +35,9 @@ class Binary:
 class Hexadecimal:
     @staticmethod
     def to_dec(hexadecimal: str, n: int = 0) -> int:
-        hex_symbols = '0123456789ABCDEF'
-
         if not hexadecimal:
             return 0
-        return hex_symbols.index(hexadecimal[-1]) * 16**n + Hexadecimal.to_dec(hexadecimal[:-1], n+1)
+        return HEX_SYMBOL.index(hexadecimal[-1]) * 16**n + Hexadecimal.to_dec(hexadecimal[:-1], n+1)
 
     @staticmethod
     def to_bin(hexadecimal: str) -> str:
