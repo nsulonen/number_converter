@@ -8,6 +8,31 @@
         <title>Number Converter</title>
     </head>
     <body>
-        <p>hello there</p>
+        <header>
+            <h1>Number Converter</h1>
+        </header>
+        <div class="container">
+            <form method="POST" action="/">
+                <label for="number">Enter a number:</label>
+                <input type="text" id="number" name="number" required>
+
+                <label for="conversion">Choose conversion type:</label>
+                <select id="conversion" name="conversion">
+                    <option value="to_bin">Decimal to Binary</option>
+                    <option value="to_hex">Decimal to Hexadecimal</option>
+                    <option value="to_dec_from_bin">Binary to Decimal</option>
+                    <option value="to_hex_from_bin">Binary to Hexadecimal</option>
+                    <option value="to_dec_from_hex">Hexadecimal to Decimal</option>
+                    <option value="to_bin_from_hex">Hexadecimal to Binary</option>
+                </select>
+
+                <button type="submit">Convert</button>
+            </form>
+
+            {% if result is not none %}
+            <h2>Conversion Result:</h2>
+            <p>{{ result }}</p>
+            {% endif %}
+        </div>
     </body>
 </html>
