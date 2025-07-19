@@ -31,10 +31,13 @@
                 </div>
             </form>
 
-            {% if result is not none %}
-            <h2>Conversion Result:</h2>
-            <p>{{ result }}</p>
-            {% endif %}
+            
+            <textarea id="result" name="result" readonly disabled>
+                {% if result is not none %}
+                    {{ result }}
+                {% endif %}
+            </textarea>
+            
         </div>
     </body>
 </html>
