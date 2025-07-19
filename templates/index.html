@@ -13,20 +13,22 @@
         </header>
         <div class="container">
             <form method="POST" action="/">
-                <label for="number">Enter a number:</label>
-                <input type="text" id="number" name="number" required>
-
-                <label for="conversion">Choose conversion type:</label>
-                <select id="conversion" name="conversion">
-                    <option value="to_bin">Decimal to Binary</option>
-                    <option value="to_hex">Decimal to Hexadecimal</option>
-                    <option value="to_dec_from_bin">Binary to Decimal</option>
-                    <option value="to_hex_from_bin">Binary to Hexadecimal</option>
-                    <option value="to_dec_from_hex">Hexadecimal to Decimal</option>
-                    <option value="to_bin_from_hex">Hexadecimal to Binary</option>
-                </select>
-
-                <button type="submit">Convert</button>
+                <div class="input-container">
+                    <label for="number">Enter a number:</label>
+                    <input type="text" id="number" name="number" required>
+                </div>
+                <div class="selection-container">
+                    <label for="conversion">Choose conversion type:</label>
+                    <select id="conversion" name="conversion">
+                        <option value="to_bin">Decimal to Binary</option>
+                        <option value="to_hex">Decimal to Hexadecimal</option>
+                        <option value="to_dec_from_bin">Binary to Decimal</option>
+                        <option value="to_hex_from_bin">Binary to Hexadecimal</option>
+                        <option value="to_dec_from_hex">Hexadecimal to Decimal</option>
+                        <option value="to_bin_from_hex">Hexadecimal to Binary</option>
+                    </select>
+                    <button type="submit">Convert</button>
+                </div>
             </form>
 
             {% if result is not none %}
