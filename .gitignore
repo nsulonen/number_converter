@@ -1,5 +1,10 @@
-.venv
 __pycache__
-number_converter.iml
-.idea
-shell.nix
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
